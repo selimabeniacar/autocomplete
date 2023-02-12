@@ -1,0 +1,10 @@
+syntax = "proto3";
+package trie;
+
+option go_package = "../triepb";
+
+message Trie {
+    repeated Trie fanout = 1;
+    int32 freqs = 2;
+    bool end = 3;
+}
